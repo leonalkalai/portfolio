@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
-import { MainComponent } from './main/main.component';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component'; // Adjust paths as needed
 import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [HeaderComponent, MainComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [RouterOutlet, HeaderComponent, FooterComponent]  // Import RouterOutlet and custom components
 })
-export class AppComponent {
-  title = 'landing-page';
-}
+export class AppComponent {}
